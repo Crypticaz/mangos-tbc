@@ -8749,7 +8749,7 @@ float Unit::GetSpeedInMotion() const
 
 float Unit::GetSpeed(UnitMoveType mtype) const
 {
-    return m_speed_rate[mtype] * baseMoveSpeed[mtype];
+    return m_speed_rate[mtype] * baseMoveSpeed[mtype] * sWorld.getConfig(CONFIG_FLOAT_RUN_SPEED_WORLD);
 }
 
 float Unit::GetSpeedRateInMotion() const
